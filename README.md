@@ -2,6 +2,43 @@
 
 A React-based web application that analyzes Amazon wishlist items for environmental impact and provides sustainable alternatives and purchasing guidance.
 
+## 🚀 Quick Start - Launch Locally
+
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm (comes with Node.js)
+
+### Installation & Launch Steps
+
+1. **Clone or Download the Project**
+   ```bash
+   git clone <repository-url>
+   cd sustainable-wishlist-analyzer
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the Development Server**
+   ```bash
+   npm start
+   ```
+
+4. **Open Your Browser**
+   - Navigate to `http://localhost:3000`
+   - The app will automatically reload if you make any changes to the code
+
+### 🎯 How to Use the App
+1. Click the **"Import Wishlist"** button to load the demo Amazon wishlist
+2. Navigate to the **"Search Alternatives"** tab to browse sustainable coffee machines
+3. Explore environmental impact analysis and sustainable alternatives
+4. Use the "Do You Really Need This?" challenge feature
+5. Track your sustainable choices in the Action Summary
+
+---
+
 ## Features
 
 ### ✨ Core Functionality
@@ -64,8 +101,9 @@ src/
 └── index.js                   # React DOM rendering
 ```
 
-## Installation & Setup
+## 💻 Development Setup
 
+### Local Development
 1. **Clone or download the project**
 2. **Install dependencies**:
    ```bash
@@ -78,6 +116,12 @@ src/
    ```
 
 4. **Open your browser** to `http://localhost:3000`
+
+### Available Scripts
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm test` - Launches the test runner
+- `npm run eject` - Ejects from Create React App (one-way operation)
 
 ## How to Use
 

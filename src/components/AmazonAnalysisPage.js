@@ -71,7 +71,8 @@ const AmazonAnalysisPage = () => {
       </div>
 
       <div className="container">
-        <div className="analysis-form-section">
+        <div className="analysis-section">
+          <div className="analysis-form-section">
           <form onSubmit={handleAnalyze} className="analysis-form">
             <div className="form-group">
               <label htmlFor="amazon-url">Amazon Product URL</label>
@@ -396,6 +397,7 @@ const AmazonAnalysisPage = () => {
             </div>
           </div>
         )}
+        </div>
       </div>
     </div>
   );

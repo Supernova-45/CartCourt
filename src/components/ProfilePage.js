@@ -124,83 +124,87 @@ const ProfilePage = () => {
 
   return (
     <div className="profile-page">
-      <div className="profile-header">
-        <div className="profile-hero">
-          <div className="profile-avatar">
-            <div className="avatar-circle">♻</div>
-            <div className="level-badge">Level {userStats.level}</div>
-          </div>
-          <div className="profile-info">
-            <h1>Your Sustainability Journey</h1>
-            <p>Member since {userStats.joinDate}</p>
-            <div className="streak-counter">
-              🔥 {userStats.streak} day streak
+      <div className="profile-hero">
+        <div className="container">
+          <div className="profile-hero-content">
+            <div className="profile-avatar">
+              <div className="avatar-circle">♻</div>
+              <div className="level-badge">Level {userStats.level}</div>
+            </div>
+            <div className="profile-info">
+              <h1>Your Sustainability Journey</h1>
+              <p>Member since {userStats.joinDate}</p>
+              <div className="streak-counter">
+                🔥 {userStats.streak} day streak
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="stats-overview">
-          <div className="stat-card primary">
-            <div className="stat-icon">♻</div>
-            <div className="stat-content">
-              <div className="stat-number">{userStats.carbonSaved}<span className="unit">kg</span></div>
-              <div className="stat-label">CO₂ Saved</div>
+          <div className="stats-overview">
+            <div className="stat-card primary">
+              <div className="stat-icon">♻</div>
+              <div className="stat-content">
+                <div className="stat-number">{userStats.carbonSaved}<span className="unit">kg</span></div>
+                <div className="stat-label">CO₂ Saved</div>
+              </div>
+            </div>
+            <div className="stat-card secondary">
+              <div className="stat-icon">★</div>
+              <div className="stat-content">
+                <div className="stat-number">{userStats.greenPoints.toLocaleString()}</div>
+                <div className="stat-label">Green Points</div>
+              </div>
+            </div>
+            <div className="stat-card tertiary">
+              <div className="stat-icon">⚡</div>
+              <div className="stat-content">
+                <div className="stat-number">{userStats.totalDecisions}</div>
+                <div className="stat-label">Smart Decisions</div>
+              </div>
             </div>
           </div>
-          <div className="stat-card secondary">
-            <div className="stat-icon">★</div>
-            <div className="stat-content">
-              <div className="stat-number">{userStats.greenPoints.toLocaleString()}</div>
-              <div className="stat-label">Green Points</div>
-            </div>
-          </div>
-          <div className="stat-card tertiary">
-            <div className="stat-icon">⚡</div>
-            <div className="stat-content">
-              <div className="stat-number">{userStats.totalDecisions}</div>
-              <div className="stat-label">Smart Decisions</div>
-            </div>
-          </div>
-        </div>
 
-        <div className="progress-section">
-          <div className="level-progress">
-            <div className="progress-info">
-              <span>Progress to Level {userStats.level + 1}</span>
-              <span>{userStats.nextLevelPoints - userStats.greenPoints} points to go</span>
-            </div>
-            <div className="progress-bar">
-              <div 
-                className="progress-fill" 
-                style={{ width: `${(userStats.greenPoints / userStats.nextLevelPoints) * 100}%` }}
-              ></div>
+          <div className="progress-section">
+            <div className="level-progress">
+              <div className="progress-info">
+                <span>Progress to Level {userStats.level + 1}</span>
+                <span>{userStats.nextLevelPoints - userStats.greenPoints} points to go</span>
+              </div>
+              <div className="progress-bar">
+                <div 
+                  className="progress-fill" 
+                  style={{ width: `${(userStats.greenPoints / userStats.nextLevelPoints) * 100}%` }}
+                ></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="profile-tabs">
-        <button 
-          className={`tab-btn ${activeTab === 'overview' ? 'active' : ''}`}
-          onClick={() => setActiveTab('overview')}
-        >
-          Overview
-        </button>
-        <button 
-          className={`tab-btn ${activeTab === 'history' ? 'active' : ''}`}
-          onClick={() => setActiveTab('history')}
-        >
-          Decision History
-        </button>
-        <button 
-          className={`tab-btn ${activeTab === 'preferences' ? 'active' : ''}`}
-          onClick={() => setActiveTab('preferences')}
-        >
-          Preferences
-        </button>
-      </div>
+      <div className="container">
+        <div className="profile-section">
+          <div className="profile-tabs">
+            <button 
+              className={`tab-btn ${activeTab === 'overview' ? 'active' : ''}`}
+              onClick={() => setActiveTab('overview')}
+            >
+              Overview
+            </button>
+            <button 
+              className={`tab-btn ${activeTab === 'history' ? 'active' : ''}`}
+              onClick={() => setActiveTab('history')}
+            >
+              Decision History
+            </button>
+            <button 
+              className={`tab-btn ${activeTab === 'preferences' ? 'active' : ''}`}
+              onClick={() => setActiveTab('preferences')}
+            >
+              Preferences
+            </button>
+          </div>
 
-      <div className="profile-content">
+          <div className="profile-content">
         {activeTab === 'overview' && (
           <div className="overview-tab">
             <div className="charts-section">
@@ -447,6 +451,8 @@ const ProfilePage = () => {
             </div>
           </div>
         )}
+          </div>
+        </div>
       </div>
     </div>
   );

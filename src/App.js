@@ -68,67 +68,41 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      
-      <nav className="navigation">
-        <div className="container">
-                  <div className="nav-buttons">
-          <button 
-            className={`nav-btn ${currentPage === 'search' ? 'active' : ''}`}
-            onClick={() => setCurrentPage('search')}
-          >
-            Product Search
-          </button>
-          <button 
-            className={`nav-btn ${currentPage === 'amazon-analysis' ? 'active' : ''}`}
-            onClick={() => setCurrentPage('amazon-analysis')}
-          >
-            Amazon Analysis
-          </button>
-          <button 
-            className={`nav-btn ${currentPage === 'wishlist' ? 'active' : ''}`}
-            onClick={() => setCurrentPage('wishlist')}
-          >
-            Wishlist Analyzer
-          </button>
-          <button 
-            className={`nav-btn ${currentPage === 'cart' ? 'active' : ''}`}
-            onClick={() => setCurrentPage('cart')}
-          >
-            Shopping Cart
-          </button>
-          <button 
-            className={`nav-btn ${currentPage === 'profile' ? 'active' : ''}`}
-            onClick={() => setCurrentPage('profile')}
-          >
-            My Profile
-          </button>
-          </div>
-        </div>
-      </nav>
+      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
       
       <main className="main-content">
         {currentPage === 'wishlist' ? (
-          <div className="container">
-            {!isImported ? (
-              <ImportSection onImport={handleImport} />
-            ) : (
-              <>
-                <SummaryDashboard 
-                  totalCost={totalCost}
-                  totalEmissions={totalEmissions}
-                  itemCount={items.length}
-                  potentialSavings={potentialSavings}
-                />
-                
-                <WishlistContainer 
-                  items={items}
-                  onItemAction={handleItemAction}
-                />
-                
-                <ActionSummary actionCounts={actionCounts} />
-              </>
-            )}
+          <div className="wishlist-page">
+            <div className="wishlist-hero">
+              <div className="container">
+                <h1>Wishlist Analyzer</h1>
+                <p className="wishlist-subtitle">Analyze your Amazon wishlist for sustainability insights</p>
+              </div>
+            </div>
+            
+            <div className="container">
+              <div className="wishlist-section">
+                {!isImported ? (
+                  <ImportSection onImport={handleImport} />
+                ) : (
+                  <>
+                    <SummaryDashboard 
+                      totalCost={totalCost}
+                      totalEmissions={totalEmissions}
+                      itemCount={items.length}
+                      potentialSavings={potentialSavings}
+                    />
+                    
+                    <WishlistContainer 
+                      items={items}
+                      onItemAction={handleItemAction}
+                    />
+                    
+                    <ActionSummary actionCounts={actionCounts} />
+                  </>
+                )}
+              </div>
+            </div>
           </div>
         ) : currentPage === 'search' ? (
           <SearchPage />

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A React-based sustainable wishlist analyzer for Amazon products",
   "main": "index.js",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

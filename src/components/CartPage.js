@@ -38,39 +38,6 @@ const CartPage = () => {
 
   return (
     <div className="cart-page">
-      {/* Amazon-style promo banner */}
-      <div className="promo-banner">
-        <div className="promo-content">
-          <div className="promo-image">
-            <img 
-              src={items[0].image} 
-              alt="Promo" 
-              style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
-            />
-          </div>
-          <div className="promo-text">
-            <h2>Get $80 off instantly</h2>
-            <p>upon approval for the Amazon Store Card</p>
-          </div>
-          <div className="promo-price">
-            <div className="price-details">
-              <div className="price-row">
-                <span className="price-label">Current subtotal:</span>
-                <span className="price-value">${summary.subtotal.toFixed(2)}</span>
-              </div>
-              <div className="price-row">
-                <span className="price-label">Gift Card savings:</span>
-                <span className="price-value">- $80.00</span>
-              </div>
-              <div className="price-row">
-                <span className="price-label">Cost after savings:</span>
-                <span className="price-value">${(summary.subtotal - 80).toFixed(2)}</span>
-              </div>
-            </div>
-            <button className="learn-more-btn">Learn more</button>
-          </div>
-        </div>
-      </div>
 
       <div className="cart-container">
         <h1 className="cart-title">Shopping Cart</h1>

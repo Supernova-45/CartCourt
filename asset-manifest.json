@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/cartcourt/static/css/main.3fc2ee8e.css",
-    "main.js": "/cartcourt/static/js/main.59636c50.js",
-    "static/media/pic2.3.jpg": "/cartcourt/static/media/pic2.3.bd17e8b830ef864e546d.jpg",
-    "static/media/41n8zdRKObL._AC_.jpg": "/cartcourt/static/media/41n8zdRKObL._AC_.5037778bb6f0cdce4f6d.jpg",
-    "static/media/pic2.1.jpg": "/cartcourt/static/media/pic2.1.8c5278ce8e3687d1afd4.jpg",
-    "static/media/pic4.jpg": "/cartcourt/static/media/pic4.f893f707db39a3abf5d1.jpg",
-    "static/media/71BvCt6eAFL._AC_UL320_.jpg": "/cartcourt/static/media/71BvCt6eAFL._AC_UL320_.1976b6da7139af13935c.jpg",
-    "static/media/pic2.jpg": "/cartcourt/static/media/pic2.b4c5b65f07959494553d.jpg",
-    "static/media/71gYAwOfxPL._AC_UL320_.jpg": "/cartcourt/static/media/71gYAwOfxPL._AC_UL320_.3fff7c9849c26b85d25a.jpg",
-    "static/media/pic1.jpg": "/cartcourt/static/media/pic1.a51d6ca7ba0c9af760ff.jpg",
-    "static/media/71McTfnZGvL._AC_UL320_.jpg": "/cartcourt/static/media/71McTfnZGvL._AC_UL320_.85289df3f38955ad8e96.jpg",
-    "static/media/71LB1AbsorL._AC_UL320_.jpg": "/cartcourt/static/media/71LB1AbsorL._AC_UL320_.9f8930fc0ed4d0d18457.jpg",
-    "static/media/61a7BOOkDjL._AC_UL320_.jpg": "/cartcourt/static/media/61a7BOOkDjL._AC_UL320_.38eaee820b473b4d6d18.jpg",
-    "static/media/51HrtoZ9YVL._AC_UL320_.jpg": "/cartcourt/static/media/51HrtoZ9YVL._AC_UL320_.3d1382af022e21dbe3a0.jpg",
-    "static/media/pic2.2.jpg": "/cartcourt/static/media/pic2.2.fecf5a9f4dcefcd74cb2.jpg",
-    "index.html": "/cartcourt/index.html",
-    "main.3fc2ee8e.css.map": "/cartcourt/static/css/main.3fc2ee8e.css.map",
-    "main.59636c50.js.map": "/cartcourt/static/js/main.59636c50.js.map"
+    "main.css": "/CartCourt/static/css/main.3fc2ee8e.css",
+    "main.js": "/CartCourt/static/js/main.555e1c84.js",
+    "static/media/pic2.3.jpg": "/CartCourt/static/media/pic2.3.bd17e8b830ef864e546d.jpg",
+    "static/media/41n8zdRKObL._AC_.jpg": "/CartCourt/static/media/41n8zdRKObL._AC_.5037778bb6f0cdce4f6d.jpg",
+    "static/media/pic2.1.jpg": "/CartCourt/static/media/pic2.1.8c5278ce8e3687d1afd4.jpg",
+    "static/media/pic4.jpg": "/CartCourt/static/media/pic4.f893f707db39a3abf5d1.jpg",
+    "static/media/71BvCt6eAFL._AC_UL320_.jpg": "/CartCourt/static/media/71BvCt6eAFL._AC_UL320_.1976b6da7139af13935c.jpg",
+    "static/media/pic2.jpg": "/CartCourt/static/media/pic2.b4c5b65f07959494553d.jpg",
+    "static/media/71gYAwOfxPL._AC_UL320_.jpg": "/CartCourt/static/media/71gYAwOfxPL._AC_UL320_.3fff7c9849c26b85d25a.jpg",
+    "static/media/pic1.jpg": "/CartCourt/static/media/pic1.a51d6ca7ba0c9af760ff.jpg",
+    "static/media/71McTfnZGvL._AC_UL320_.jpg": "/CartCourt/static/media/71McTfnZGvL._AC_UL320_.85289df3f38955ad8e96.jpg",
+    "static/media/71LB1AbsorL._AC_UL320_.jpg": "/CartCourt/static/media/71LB1AbsorL._AC_UL320_.9f8930fc0ed4d0d18457.jpg",
+    "static/media/61a7BOOkDjL._AC_UL320_.jpg": "/CartCourt/static/media/61a7BOOkDjL._AC_UL320_.38eaee820b473b4d6d18.jpg",
+    "static/media/51HrtoZ9YVL._AC_UL320_.jpg": "/CartCourt/static/media/51HrtoZ9YVL._AC_UL320_.3d1382af022e21dbe3a0.jpg",
+    "static/media/pic2.2.jpg": "/CartCourt/static/media/pic2.2.fecf5a9f4dcefcd74cb2.jpg",
+    "index.html": "/CartCourt/index.html",
+    "main.3fc2ee8e.css.map": "/CartCourt/static/css/main.3fc2ee8e.css.map",
+    "main.555e1c84.js.map": "/CartCourt/static/js/main.555e1c84.js.map"
   },
   "entrypoints": [
     "static/css/main.3fc2ee8e.css",
-    "static/js/main.59636c50.js"
+    "static/js/main.555e1c84.js"
   ]
 }

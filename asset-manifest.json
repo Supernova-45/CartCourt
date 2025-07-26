@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/greensleeves/static/css/main.113aad65.css",
-    "main.js": "/greensleeves/static/js/main.ab64a326.js",
-    "index.html": "/greensleeves/index.html",
-    "main.113aad65.css.map": "/greensleeves/static/css/main.113aad65.css.map",
-    "main.ab64a326.js.map": "/greensleeves/static/js/main.ab64a326.js.map"
+    "main.css": "/cartcourt/static/css/main.3fc2ee8e.css",
+    "main.js": "/cartcourt/static/js/main.0ef43710.js",
+    "index.html": "/cartcourt/index.html",
+    "main.3fc2ee8e.css.map": "/cartcourt/static/css/main.3fc2ee8e.css.map",
+    "main.0ef43710.js.map": "/cartcourt/static/js/main.0ef43710.js.map"
   },
   "entrypoints": [
-    "static/css/main.113aad65.css",
-    "static/js/main.ab64a326.js"
+    "static/css/main.3fc2ee8e.css",
+    "static/js/main.0ef43710.js"
   ]
 }

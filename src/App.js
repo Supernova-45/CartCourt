@@ -7,9 +7,10 @@ import SummaryDashboard from './components/SummaryDashboard';
 import WishlistContainer from './components/WishlistContainer';
 import ActionSummary from './components/ActionSummary';
 import SearchPage from './components/SearchPage';
+import ProfilePage from './components/ProfilePage';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('wishlist'); // 'wishlist' or 'search'
+  const [currentPage, setCurrentPage] = useState('wishlist'); // 'wishlist', 'search', or 'profile'
   const [isImported, setIsImported] = useState(false);
   const [items, setItems] = useState([]);
   const [actionCounts, setActionCounts] = useState({
@@ -82,6 +83,12 @@ function App() {
             >
               🔍 Product Search
             </button>
+            <button 
+              className={`nav-btn ${currentPage === 'profile' ? 'active' : ''}`}
+              onClick={() => setCurrentPage('profile')}
+            >
+              👤 My Profile
+            </button>
           </div>
         </div>
       </nav>
@@ -109,8 +116,10 @@ function App() {
               </>
             )}
           </div>
-        ) : (
+        ) : currentPage === 'search' ? (
           <SearchPage />
+        ) : (
+          <ProfilePage />
         )}
       </main>
 

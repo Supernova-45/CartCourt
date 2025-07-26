@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { cartItems, cartSummary } from '../data/cartData';
 import { updatedCartItems, updatedCartSummary } from '../data/updatedCartData';
 import ChatBot from './ChatBot';
+import ImageLoader from './ImageLoader';
 import './CartStyles.css';
 
 const CartPage = () => {
@@ -69,13 +70,9 @@ const CartPage = () => {
                 <div key={item.id} className="cart-item">
                   <div className="item-details">
                     <div className="item-image">
-                      <img 
-                        src={item.image} 
+                      <ImageLoader 
+                        src={item.image}
                         alt={item.name} 
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = "https://via.placeholder.com/180x180?text=Product+Image";
-                        }}
                       />
                     </div>
                     <div className="item-info">

@@ -1,7 +1,7 @@
 {
   "name": "sustainable-wishlist-analyzer",
   "version": "1.0.0",
-  "homepage": "https://Supernova-45.github.io/cartcourt",
+  "homepage": "https://Supernova-45.github.io/CartCourt",
   "description": "A React-based sustainable wishlist analyzer for Amazon products",
   "main": "index.js",
   "engines": {

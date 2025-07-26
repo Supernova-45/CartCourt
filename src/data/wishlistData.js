@@ -42,7 +42,7 @@ export const wishlistItems = [
     price: 19.98,
     category: "Office Product",
     description: "Fine Soft Nib & Sleek Shape Aluminum Short Pocket Travel Pen (Midnight Blue)",
-    image: "/wishlist_files/fountain_pen.jpg",
+    image: "./wishlist_files/fountain_pen.jpg",
     environmental: {
       carbonFootprint: 8.5,
       microplastics: "Low",
@@ -111,7 +111,7 @@ export const wishlistItems = [
     price: 7.42,
     category: "Office Product",
     description: "Japan Import gel ink pens",
-    image: "/wishlist_files/muji_pens.jpg",
+    image: "./wishlist_files/muji_pens.jpg",
     environmental: {
       carbonFootprint: 3.2,
       microplastics: "Medium",
@@ -147,7 +147,7 @@ export const wishlistItems = [
     price: 98.79,
     category: "Kitchen",
     description: "Chrome Steel. Makes Lasagna, Fettuccine & Tagliolini",
-    image: "/wishlist_files/pasta_maker.jpg",
+    image: "./wishlist_files/pasta_maker.jpg",
     environmental: {
       carbonFootprint: 25.6,
       microplastics: "None",
@@ -223,7 +223,7 @@ export const wishlistItems = [
     price: 59.99,
     category: "Kitchen",
     description: "5 Speed, Empire Red, Regular Style",
-    image: "/wishlist_files/hand_blender.jpg",
+    image: "./wishlist_files/hand_blender.jpg",
     environmental: {
       carbonFootprint: 18.7,
       microplastics: "Medium",
@@ -259,7 +259,7 @@ export const wishlistItems = [
     price: 149.00,
     category: "Electronics",
     description: "10.1\", Add Photos with Aura App, Free Unlimited Storage - Gravel",
-    image: "/wishlist_files/digital_picture_frame.jpg",
+    image: "./wishlist_files/digital_picture_frame.jpg",
     environmental: {
       carbonFootprint: 67.3,
       microplastics: "High",
@@ -295,7 +295,7 @@ export const wishlistItems = [
     price: 95.99,
     category: "Office Product",
     description: "Clay White smartphone printer",
-    image: "/wishlist_files/instax_printer.jpg",
+    image: "./wishlist_files/instax_printer.jpg",
     environmental: {
       carbonFootprint: 32.4,
       microplastics: "High",
@@ -331,7 +331,7 @@ export const wishlistItems = [
     price: 49.99,
     category: "Tools & Home Improvement",
     description: "16.4Ft, 1000 Lumens, 16M Colors, Works w/Apple HomeKit/Alexa/Google",
-    image: "/wishlist_files/led_light_strip.jpg",
+    image: "./wishlist_files/led_light_strip.jpg",
     environmental: {
       carbonFootprint: 28.9,
       microplastics: "High",
@@ -367,7 +367,7 @@ export const wishlistItems = [
     price: 149.99,
     category: "Electronics",
     description: "Stone, Wireless Outdoor Bluetooth 5.3, 22-Hour Battery, Solar Charging",
-    image: "/wishlist_files/bluetooth_speaker.jpg",
+    image: "./wishlist_files/bluetooth_speaker.jpg",
     environmental: {
       carbonFootprint: 41.6,
       microplastics: "Medium",

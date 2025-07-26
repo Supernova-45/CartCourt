@@ -88,7 +88,7 @@ const SearchResults = ({ query, onNewSearch }) => {
                 <div className="product-price">
                   <span className="price-symbol">$</span>
                   <span className="price-whole">{Math.floor(product.price)}</span>
-                  <span className="price-fraction">{((product.price % 1) * 100).toFixed(0).padStart(2, '0')}</span>
+                  <span className="price-fraction">.{((product.price % 1) * 100).toFixed(0).padStart(2, '0')}</span>
                 </div>
                 
                 <div className="review-analysis-summary">
@@ -141,7 +141,7 @@ const SearchResults = ({ query, onNewSearch }) => {
                 <div className="modal-price">
                 <span className="price-symbol">$</span>
                 <span className="price-whole">{Math.floor(selectedProduct.price)}</span>
-                <span className="price-fraction">{((selectedProduct.price % 1) * 100).toFixed(0).padStart(2, '0')}</span>
+                <span className="price-fraction">.{((selectedProduct.price % 1) * 100).toFixed(0).padStart(2, '0')}</span>
               </div>
               </div>
               
@@ -216,7 +216,7 @@ const SearchResults = ({ query, onNewSearch }) => {
                         <div className="alt-price">
                           <span className="price-symbol">$</span>
                           <span className="price-whole">{Math.floor(alt.price)}</span>
-                          <span className="price-fraction">{((alt.price % 1) * 100).toFixed(0).padStart(2, '0')}</span>
+                          <span className="price-fraction">.{((alt.price % 1) * 100).toFixed(0).padStart(2, '0')}</span>
                         </div>
                         <div className="carbon-savings">
                           🌱 Saves {alt.carbonReduction} kg CO₂

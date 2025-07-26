@@ -8,9 +8,10 @@ import WishlistContainer from './components/WishlistContainer';
 import ActionSummary from './components/ActionSummary';
 import SearchPage from './components/SearchPage';
 import ProfilePage from './components/ProfilePage';
+import AmazonAnalysisPage from './components/AmazonAnalysisPage';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('wishlist'); // 'wishlist', 'search', or 'profile'
+  const [currentPage, setCurrentPage] = useState('wishlist'); // 'wishlist', 'search', 'profile', or 'amazon-analysis'
   const [isImported, setIsImported] = useState(false);
   const [items, setItems] = useState([]);
   const [actionCounts, setActionCounts] = useState({
@@ -72,23 +73,29 @@ function App() {
         <div className="container">
                   <div className="nav-buttons">
           <button 
+            className={`nav-btn ${currentPage === 'search' ? 'active' : ''}`}
+            onClick={() => setCurrentPage('search')}
+          >
+            Product Search
+          </button>
+          <button 
+            className={`nav-btn ${currentPage === 'amazon-analysis' ? 'active' : ''}`}
+            onClick={() => setCurrentPage('amazon-analysis')}
+          >
+            🌱 Amazon Analysis
+          </button>
+          <button 
             className={`nav-btn ${currentPage === 'wishlist' ? 'active' : ''}`}
             onClick={() => setCurrentPage('wishlist')}
           >
             Wishlist Analyzer
           </button>
           <button 
-            className={`nav-btn ${currentPage === 'search' ? 'active' : ''}`}
-            onClick={() => setCurrentPage('search')}
+            className={`nav-btn ${currentPage === 'profile' ? 'active' : ''}`}
+            onClick={() => setCurrentPage('profile')}
           >
-            Product Search
+            👤 My Profile
           </button>
-            <button 
-              className={`nav-btn ${currentPage === 'profile' ? 'active' : ''}`}
-              onClick={() => setCurrentPage('profile')}
-            >
-              👤 My Profile
-            </button>
           </div>
         </div>
       </nav>
@@ -118,6 +125,8 @@ function App() {
           </div>
         ) : currentPage === 'search' ? (
           <SearchPage />
+        ) : currentPage === 'amazon-analysis' ? (
+          <AmazonAnalysisPage />
         ) : (
           <ProfilePage />
         )}

@@ -1,207 +1,79 @@
-# 🌱 Sustainable Wishlist Analyzer
+# CartCourt: Judging your purchases so the planet doesn’t have to
 
-A React-based web application that analyzes Amazon wishlist items for environmental impact and provides sustainable alternatives and purchasing guidance.
+## Inspiration: For the Greener Good
 
-## 🚀 Quick Start - Launch Locally
+You know what you need — a Mac, dog biscuits, or perhaps a new coffee machine. So you open Amazon.com… and suddenly you’re staring at two dozen nearly identical products, all boasting the same buzzwords: “eco-friendly,” “BPA-free,” “sustainable packaging.”
 
-### Prerequisites
-- Node.js (version 14 or higher)
-- npm (comes with Node.js)
+Amazon highlights a handful with its green “Climate Pledge Friendly” badge — but what does that even mean?
 
-### Installation & Launch Steps
+The Climate Pledge Friendly label, while a good start, doesn't:
+Compare sustainability across similar items
+Account for the end-to-end carbon pipeline (shipping distance, packaging type, or manufacturing emissions)
+Filter out greenwashed products that use vague language without backing up claims
+Consider ESG certifications and compliance of the seller
 
-1. **Clone or Download the Project**
-   ```bash
-   git clone <repository-url>
-   cd sustainable-wishlist-analyzer
-   ```
+The average American household generates 18.3 tons of CO₂ annually through purchases alone, yet 73% of consumers want to shop more sustainably but don't know how. Amazon’s commitment to becoming net zero by 2040 is laudable, but it can’t succeed without empowering you to make holistic choices that are better for the planet — and for you.
 
-2. **Install Dependencies**
-   ```bash
-   npm install
-   ```
+Right now, that power is buried in PDFs, certifications, and thousands of reviews. Enter: CartCourt.
 
-3. **Start the Development Server**
-   ```bash
-   npm start
-   ```
+## What it does
 
-4. **Open Your Browser**
-   - Navigate to `http://localhost:3000`
-   - The app will automatically reload if you make any changes to the code
+CartCourt is a web app that empowers users to make smarter, sustainable shopping choices on Amazon. We give users the agency to navigate the jungle of lookalike listings, swinging beyond fake marketing and generic labels.
 
-### 🎯 How to Use the App
-1. Click the **"Import Wishlist"** button to load the demo Amazon wishlist
-2. Navigate to the **"Search Alternatives"** tab to browse sustainable coffee machines
-3. Explore environmental impact analysis and sustainable alternatives
-4. Use the "Do You Really Need This?" challenge feature
-5. Track your sustainable choices in the Action Summary
+Leveraging AI analysis, we:
+Scrape and analyze reviews to detect greenwashing and assess product durability
+Aggregate product-level environmental certifications (Fair Trade, B Corp, FSC, GOTS, etc.)
+Estimate carbon footprint, packaging waste, and shipping emissions
+Offer smarter swaps, wait-or-buy challenges, and reward simulations to incentivize lower-impact habits
 
----
+Looking to splurge? 
+Search for any item you’re thinking about buying and discover the most sustainable alternatives — powered by review analysis, ESG certifications, and greenwashing detection. Get the information you won’t find by scrolling through the product listing.
 
-## Features
+Debating whether to hit “add to cart”? 
+Paste an Amazon product link to instantly reveal:
+Estimated carbon footprint
+LLM-powered sentiment analysis of product reviews
+Verified sustainability certifications (e.g., Fair Trade, B Corp, Rainforest Alliance)
 
-### ✨ Core Functionality
-- **Import Wishlist**: Click to load and analyze your hardcoded Amazon wishlist
-- **Environmental Impact Analysis**: Detailed breakdown of carbon footprint, microplastics, energy usage, water consumption, recyclability, and packaging impact for each item
-- **Greener Alternatives**: Multiple sustainable alternatives with carbon reduction calculations and benefit lists
-- **"Do You Really Need This?" Challenge**: Interactive assessment with Wait/Swap/Donate options
-- **Total Impact Dashboard**: Real-time summary of total cost, emissions, and potential savings
+About to check out?
+Analyze what’s currently in your checkout queue:
+Estimated emissions based on item weight, shipping method, and number of packages 
+Suggestions to reduce emissions by delaying or consolidating deliveries
 
-### 📊 Sustainability Metrics
-- Carbon footprint calculations (kg CO₂)
-- Microplastics assessment
-- Energy and water usage analysis
-- Recyclability scores
-- Packaging impact evaluation
-- Sustainability scoring (1-10 scale)
 
-### 🎯 Interactive Features
-- **Wait 30 Days**: Helps reduce impulse purchases
-- **Swap Alternative**: Choose more sustainable options with detailed benefits
-- **Donate Instead**: Redirect purchasing power to meaningful causes
-- **Action Tracking**: Live summary of your sustainable choices
+Dreaming of a shopping spree?
+Click “Import Wishlist” to scan and assess everything you’ve been eyeing. For each item, you’ll see:
+Environmental cost summary (e.g., microplastics, energy use, carbon footprint)
+Greener alternatives with easy one-click swaps
+Tailored prompts like: “How long have you had your current one?”
+Total emissions impact of wishlist
 
-## Hardcoded Wishlist Items
 
-The application analyzes 9 real Amazon wishlist items:
+Feeling guilty about your purchases?
+View a running history of all your past scans and wishlist analyses.
+See your cumulative emissions saved and visually track your personal footprint reduction over time.
+Earn Green Points for making smarter swaps and consolidating shipments.
+Compete with friends in impact challenges and see who can save the most CO₂ — or get roasted by Peccy for falling off.
 
-1. **Gemmy Inflatable Movie Screen** ($109.80) - High environmental impact
-2. **Hongdian Fountain Pen** ($19.98) - Moderate impact, aluminum construction
-3. **Muji Gel Pens** ($7.42) - Low cost, international shipping impact
-4. **MARCATO Pasta Maker** ($98.79) - Steel construction, manual operation
-5. **KitchenAid Hand Blender** ($59.99) - Electric appliance with mixed materials
-6. **Aura Digital Picture Frame** ($149.00) - High energy consumption, e-waste
-7. **Fujifilm Smartphone Printer** ($95.99) - Electronic device with plastic components
-8. **Tapo Smart LED Strip** ($49.99) - Electronic lighting with multiple colors
-9. **Victrola Bluetooth Speaker** ($149.99) - Outdoor speaker with solar charging
+## How we built it
 
-## Technology Stack
+Front end: We used React, Javascript, and CSS to build a modern, responsive design. 
+Hosting: We used GitHub Pages for site hosting.
+LLMs: We used the OpenAI API for sentiment analysis of the reviews and to give user-friendly suggestions via a chatbot.
+Machine Learning Models: We used Python-based machine learning to train a regression model to predict the weight of Amazon products. We used CarbonSutra API to estimate the carbon footprint of different products based on product weight and locations.
 
-- **React 18.2.0**: Modern React with hooks and functional components
-- **CSS3**: Custom styling with responsive design
-- **JavaScript ES6+**: Modern JavaScript features
-- **Component Architecture**: Modular, reusable components
+## Challenges we ran into
 
-## Project Structure
+Due to time limitations, we weren’t able to integrate the back end components that we had initially planned on.
 
-```
-src/
-├── components/
-│   ├── Header.js              # Main header component
-│   ├── ImportSection.js       # Wishlist import button
-│   ├── SummaryDashboard.js    # Metrics summary cards
-│   ├── WishlistContainer.js   # Container for all items
-│   ├── WishlistItem.js        # Individual item analysis
-│   └── ActionSummary.js       # User action tracking
-├── data/
-│   └── wishlistData.js        # Hardcoded wishlist items with environmental data
-├── App.js                     # Main application component
-├── App.css                    # Complete styling
-└── index.js                   # React DOM rendering
-```
+## Accomplishments that we're proud of
 
-## 💻 Development Setup
+Getting the site deployed in such a short period of time and ideating on a concept we believe Amazon customers (and the planet) would immediately benefit from.
 
-### Local Development
-1. **Clone or download the project**
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-   
-3. **Start the development server**:
-   ```bash
-   npm start
-   ```
+## What's next for CartCourt
 
-4. **Open your browser** to `http://localhost:3000`
-
-### Available Scripts
-- `npm start` - Runs the app in development mode
-- `npm run build` - Builds the app for production
-- `npm test` - Launches the test runner
-- `npm run eject` - Ejects from Create React App (one-way operation)
-
-## How to Use
-
-1. **Click "Import Wishlist"** to load the hardcoded Amazon wishlist
-2. **View the Summary Dashboard** showing total environmental impact
-3. **Explore each item** to see:
-   - Detailed environmental impact breakdown
-   - Multiple greener alternatives with benefits
-   - Sustainability score and usage assessment
-4. **Challenge each purchase** using the "Do You Really Need This?" feature
-5. **Choose actions**: Wait 30 days, Swap to alternatives, or Donate instead
-6. **Track your impact** in the Action Summary section
-
-## Environmental Impact Categories
-
-### 🌍 Carbon Footprint
-Calculated in kg CO₂ equivalent, including manufacturing, shipping, and usage
-
-### 🧪 Microplastics
-Assessment of plastic pollution potential (High/Medium/Low)
-
-### ⚡ Energy Usage
-Power consumption for manufacturing and operation
-
-### 💧 Water Usage
-Water consumption in liters for production processes
-
-### ♻️ Recyclability
-End-of-life disposal and recycling potential
-
-### 📦 Packaging
-Environmental impact of product packaging
-
-## Key Features Deep Dive
-
-### Alternative Selection System
-- Multiple alternatives per item with detailed comparisons
-- Carbon reduction calculations for each alternative
-- Cost comparisons and benefit analyses
-- Interactive selection interface
-
-### Smart Challenge System
-- Frequency-based usage assessment
-- Alternative lifestyle suggestions
-- Sustainability scoring with color-coded badges
-- Actionable recommendations
-
-### Action Tracking
-- Real-time updates of user decisions
-- Impact calculations based on actions taken
-- Motivational feedback for sustainable choices
-- Progress visualization
-
-## Responsive Design
-
-- Mobile-first approach with responsive breakpoints
-- Touch-friendly interface for mobile devices
-- Optimized layouts for tablets and desktops
-- Accessibility features and proper contrast ratios
-
-## Educational Value
-
-This application serves as an educational tool to:
-- Raise awareness about consumption's environmental impact
-- Provide concrete alternatives to common purchases
-- Encourage mindful purchasing decisions
-- Demonstrate the cumulative effect of individual choices
-- Promote sustainable consumption patterns
-
-## Future Enhancements
-
-Potential features for future development:
-- Real Amazon API integration
-- User accounts and wishlist saving
-- Social sharing of sustainability achievements
-- Expanded alternative database
-- Machine learning for better impact calculations
-- Carbon offset purchasing integration
-- Community features and challenges
-
----
-
-**Built for the Amazon Hackathon 2025** - Making purchasing decisions that matter for our planet 🌍
+More user customization and interaction, such as being able to:
+See your real-time “impact dashboard” as you shop
+Set monthly carbon or green point goals and track progress
+Public “impact pledges” and badges you can wear proudly
+Integrate the website with a browser extension so that the website is better integrated into the Amazon shopping experience

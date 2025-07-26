@@ -9,6 +9,7 @@ export const cartItems = [
     quantity: 1,
     inStock: true,
     seller: "Amazon.com",
+    shippingFrom: "Tokyo, Japan",
     environmental: {
       carbonFootprint: 18.5,
       recyclability: "Medium",
@@ -25,6 +26,7 @@ export const cartItems = [
     quantity: 1,
     inStock: true,
     seller: "DASH",
+    shippingFrom: "London, UK",
     environmental: {
       carbonFootprint: 12.8,
       recyclability: "High (glass carafe)",
@@ -41,6 +43,7 @@ export const cartItems = [
     quantity: 1,
     inStock: true,
     seller: "TESSAN",
+    shippingFrom: "NYC, USA",
     environmental: {
       carbonFootprint: 8.4,
       recyclability: "Low (electronic waste)",
@@ -57,6 +60,7 @@ export const cartItems = [
     quantity: 1,
     inStock: true,
     seller: "yodo",
+    shippingFrom: "Vancouver, CA",
     environmental: {
       carbonFootprint: 7.8,
       recyclability: "Low (mixed materials)",

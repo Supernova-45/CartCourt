@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { cartItems, cartSummary } from '../data/cartData';
+import { updatedCartItems, updatedCartSummary } from '../data/updatedCartData';
+import ChatBot from './ChatBot';
 import './CartStyles.css';
 
 const CartPage = () => {
   const [items, setItems] = useState(cartItems);
   const [summary, setSummary] = useState(cartSummary);
+  const [showBundledBadge, setShowBundledBadge] = useState(false);
+  const [showCarbonSavings, setShowCarbonSavings] = useState(false);
 
   const handleQuantityChange = (id, newQuantity) => {
     const updatedItems = items.map(item => 
@@ -34,6 +38,14 @@ const CartPage = () => {
       totalAfterSavings: newSubtotal - summary.giftCardSavings,
       itemCount: updatedItems.reduce((count, item) => count + item.quantity, 0)
     });
+  };
+  
+  const handleReplacementConfirmed = () => {
+    // Replace cart items with eco-friendly alternatives
+    setItems(updatedCartItems);
+    setSummary(updatedCartSummary);
+    setShowBundledBadge(true);
+    setShowCarbonSavings(true);
   };
 
   return (
@@ -74,9 +86,16 @@ const CartPage = () => {
                         </div>
                       )}
                       <div className="item-stock">{item.inStock ? "In Stock" : "Out of Stock"}</div>
-                      <div className="item-seller">Sold by: {item.seller}</div>
+                      <div className="item-seller">
+                        Sold by: {item.seller}
+                      </div>
                       <div className="item-delivery-info">
-                        <span className="item-delivery-date">FREE delivery: Thu, Jul 31</span>
+                        <span className="item-delivery-date">
+                          FREE delivery: Thu, Jul 31 (from {item.shippingFrom})
+                          {item.bundledShipping && showBundledBadge && (
+                            <span className="bundled-badge">Bundled Shipping</span>
+                          )}
+                        </span>
                       </div>
                       
                       <div className="item-actions">
@@ -128,6 +147,11 @@ const CartPage = () => {
                 <div className="subtotal-summary">
                   <strong>Subtotal ({summary.itemCount} items):</strong> <span className="subtotal-price">${summary.subtotal.toFixed(2)}</span>
                 </div>
+                {showCarbonSavings && (
+                  <div className="carbon-savings">
+                    <span className="eco-icon">🌿</span> We went from 80 kg of emissions to an estimated 5 kg by making these changes!
+                  </div>
+                )}
                 <div className="gift-checkbox">
                   <input type="checkbox" id="gift-option" />
                   <label htmlFor="gift-option">This order contains a gift</label>
@@ -135,42 +159,14 @@ const CartPage = () => {
                 <button className="checkout-btn">Proceed to checkout</button>
               </div>
               
-              <div className="eco-friendly-section">
-                <h3>Eco-friendly alternatives</h3>
-                <div className="eco-message">
-                  <p>
-                    <strong>Save ${(summary.subtotal * 0.15).toFixed(2)} and reduce your carbon footprint by 25%</strong> by 
-                    choosing eco-friendly alternatives for items in your cart.
-                  </p>
-                  <button className="view-alternatives-btn">View eco-friendly alternatives</button>
-                </div>
-              </div>
-              
-              <div className="recently-viewed">
-                <h3>Your recently viewed items</h3>
-                <div className="viewed-items">
-                  <div className="viewed-item">
-                    <img 
-                      src={items[0].image} 
-                      alt="Recently viewed" 
-                    />
-                    <div className="viewed-item-details">
-                      <div className="viewed-item-name">Amazon Basics Portable TV Dinner 4-Pack</div>
-                      <div className="viewed-item-rating">★★★★☆ 30,629</div>
-                      <div className="viewed-item-price">$59<sup>99</sup></div>
-                      <div className="viewed-item-delivery">
-                        Get it as soon as <strong>Thursday, Jul 31</strong>
-                      </div>
-                      <div className="viewed-item-shipping">FREE Shipping by Amazon</div>
-                      <button className="add-to-cart-btn">Add to cart</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* Eco-friendly alternatives section removed */}
             </div>
           </div>
         </div>
       </div>
+      
+      {/* Chatbot component */}
+      <ChatBot onReplacementConfirmed={handleReplacementConfirmed} />
     </div>
   );
 };

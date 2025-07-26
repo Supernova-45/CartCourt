@@ -203,6 +203,56 @@
   font-size: 14px;
   color: #555;
   margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  color: #0066c0;
+  cursor: pointer;
+}
+
+.shipping-icon {
+  font-size: 16px;
+  margin-left: 5px;
+  color: #0066c0;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 .item-actions {
@@ -452,6 +502,36 @@
 
 .item-delivery-date {
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bundled-badge {
+  display: inline-block;
+  background-color: #007600;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 8px;
+  font-weight: normal;
+}
+
+.carbon-savings {
+  background-color: #e6f4ea;
+  color: #007600;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.carbon-savings .eco-icon {
+  margin-right: 5px;
+  font-size: 16px;
 }
 
 .item-action-buttons {

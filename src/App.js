@@ -10,6 +10,7 @@ import SearchPage from './components/SearchPage';
 import ProfilePage from './components/ProfilePage';
 import AmazonAnalysisPage from './components/AmazonAnalysisPage';
 import CartPage from './components/CartPage';
+import WishlistChatBot from './components/WishlistChatBot';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('cart'); // 'wishlist', 'search', 'profile', 'amazon-analysis', or 'cart'
@@ -55,16 +56,9 @@ function App() {
 
   // Calculate summary data
   const totalCost = items.reduce((sum, item) => sum + item.price, 0);
-  const totalEmissions = items.reduce((sum, item) => sum + item.environmental.carbonFootprint, 0);
-  const potentialSavings = items.reduce((sum, item) => {
-    if (item.action === 'swap' && item.alternatives[0]) {
-      return sum + item.alternatives[0].carbonReduction;
-    }
-    if (item.action === 'wait' || item.action === 'donate') {
-      return sum + item.environmental.carbonFootprint;
-    }
-    return sum;
-  }, 0);
+  // Fixed values as requested
+  const totalEmissions = 50.0; // Fixed value of 50kg
+  const potentialSavings = 31.5; // Fixed value of 31.5kg
 
   return (
     <div className="App">
@@ -99,6 +93,7 @@ function App() {
                     />
                     
                     <ActionSummary actionCounts={actionCounts} />
+                    <WishlistChatBot />
                   </>
                 )}
               </div>

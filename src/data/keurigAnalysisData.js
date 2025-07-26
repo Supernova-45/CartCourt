@@ -12,6 +12,82 @@ export const keurigAnalysisData = {
   sustainabilityScore: 42,
   greenLabelVerified: false,
   analysisDate: "2025-01-26",
+  esgAnalysis: {
+    environmental: {
+      score: 35,
+      grade: "D+",
+      factors: [
+        "High plastic waste from K-Cups",
+        "Limited product recyclability",
+        "Energy-efficient auto-off feature",
+        "No carbon-neutral shipping options"
+      ]
+    },
+    social: {
+      score: 52,
+      grade: "C",
+      factors: [
+        "Fair labor practices in manufacturing",
+        "Consumer accessibility and ease of use",
+        "Limited community engagement programs",
+        "No fair trade coffee partnerships"
+      ]
+    },
+    governance: {
+      score: 68,
+      grade: "B-",
+      factors: [
+        "Transparent financial reporting",
+        "Corporate sustainability commitments",
+        "Board diversity initiatives",
+        "Strong consumer privacy policies"
+      ]
+    }
+  },
+  sustainabilityCertifications: {
+    verified: [
+      {
+        name: "ENERGY STAR",
+        description: "Energy-efficient appliance certification",
+        credibility: "High",
+        scope: "Energy consumption"
+      }
+    ],
+    missing: [
+      {
+        name: "B Corporation",
+        description: "Certified B Corporations meet standards of social and environmental performance",
+        impact: "Would demonstrate comprehensive sustainability commitment"
+      },
+      {
+        name: "Fair Trade",
+        description: "Ensures ethical sourcing and fair wages",
+        impact: "Could improve social responsibility score"
+      },
+      {
+        name: "Rainforest Alliance",
+        description: "Sustainable agriculture and forest conservation",
+        impact: "Would support sustainable coffee sourcing"
+      },
+      {
+        name: "Cradle to Cradle",
+        description: "Products designed for circular economy",
+        impact: "Would address end-of-life disposal concerns"
+      }
+    ],
+    greenwashing: [
+      {
+        claim: "100% Recyclable K-Cups",
+        reality: "Only aluminum portions recyclable in limited facilities",
+        severity: "High"
+      },
+      {
+        claim: "Sustainable Packaging",
+        reality: "Significant plastic packaging still used",
+        severity: "Medium"
+      }
+    ]
+  },
   reviewAnalysis: {
     totalAnalyzed: 15247,
     categories: {

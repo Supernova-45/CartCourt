@@ -3322,6 +3322,277 @@ body {
   font-weight: 500;
 }
 
+.esg-section {
+  padding: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.esg-section h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.esg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.esg-category {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 1.5rem;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.esg-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.esg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.esg-header h4 {
+  color: #333;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.esg-score {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.esg-score-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.esg-grade {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.esg-factors {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.esg-factors li {
+  padding: 0.5rem 0;
+  color: #555;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.esg-factors li:before {
+  content: "•";
+  color: #667eea;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.certifications-section {
+  padding: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.certifications-section h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.certifications-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.verified-certifications,
+.missing-certifications,
+.greenwashing-alerts {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.verified-certifications {
+  border-left: 4px solid #4CAF50;
+}
+
+.missing-certifications {
+  border-left: 4px solid #FF9800;
+}
+
+.greenwashing-alerts {
+  border-left: 4px solid #f44336;
+}
+
+.verified-certifications h4,
+.missing-certifications h4,
+.greenwashing-alerts h4 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.certification-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+  border-color: #c0c0c0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.certification-card:last-child {
+  margin-bottom: 0;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cert-name {
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+.cert-credibility {
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.cert-credibility.high {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.cert-credibility.medium {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.cert-credibility.low {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.cert-description,
+.cert-scope,
+.cert-impact {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0.5rem 0;
+}
+
+.cert-scope {
+  font-weight: 500;
+  color: #666;
+}
+
+.cert-impact {
+  font-style: italic;
+}
+
+.greenwashing-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.greenwashing-card:hover {
+  border-color: #f44336;
+  box-shadow: 0 5px 15px rgba(244, 67, 54, 0.1);
+}
+
+.greenwashing-card:last-child {
+  margin-bottom: 0;
+}
+
+.greenwash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.greenwash-claim {
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.severity-badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.severity-badge.high {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.severity-badge.medium {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.severity-badge.low {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.greenwash-reality {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
 .insights-section {
   padding: 2rem;
 }

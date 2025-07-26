@@ -69,6 +69,39 @@ export const wishlistItems = [
       frequency: "Daily use",
       alternatives: ["Use existing pens", "Digital note-taking", "Pencils"],
       sustainabilityScore: 8
+    },
+    esgAnalysis: {
+      environmental: {
+        score: 75,
+        grade: "B+",
+        factors: ["Aluminum construction (recyclable)", "Minimal plastic components", "Long product lifespan", "Refillable ink system"]
+      },
+      social: {
+        score: 82,
+        grade: "A-",
+        factors: ["Fair labor practices", "Accessible design", "Quality craftsmanship tradition", "Educational tool support"]
+      },
+      governance: {
+        score: 71,
+        grade: "B",
+        factors: ["Transparent manufacturing", "Quality control standards", "Brand heritage", "Customer service"]
+      }
+    },
+    sustainabilityCertifications: {
+      verified: [],
+      missing: [
+        {
+          name: "Cradle to Cradle",
+          description: "Products designed for circular economy",
+          impact: "Would ensure full lifecycle sustainability"
+        },
+        {
+          name: "Forest Stewardship Council (FSC)",
+          description: "Responsible sourcing of materials",
+          impact: "Would verify sustainable packaging materials"
+        }
+      ],
+      greenwashing: []
     }
   },
   {
@@ -141,6 +174,46 @@ export const wishlistItems = [
       frequency: "2-3 times per month",
       alternatives: ["Store-bought pasta", "Other grain dishes", "Rolling pin"],
       sustainabilityScore: 7
+    },
+    esgAnalysis: {
+      environmental: {
+        score: 88,
+        grade: "A",
+        factors: ["100% stainless steel construction", "No electricity required", "Decades of durability", "Fully recyclable materials"]
+      },
+      social: {
+        score: 92,
+        grade: "A+",
+        factors: ["Made in Italy with fair wages", "Traditional craftsmanship preservation", "Family business heritage", "Artisan skill development"]
+      },
+      governance: {
+        score: 85,
+        grade: "A-",
+        factors: ["Multi-generational family ownership", "Transparent manufacturing process", "Quality guarantee program", "Sustainable business practices"]
+      }
+    },
+    sustainabilityCertifications: {
+      verified: [
+        {
+          name: "Made in Italy",
+          description: "Authentic Italian craftsmanship with strict quality standards",
+          credibility: "High",
+          scope: "Manufacturing origin and quality"
+        }
+      ],
+      missing: [
+        {
+          name: "B Corporation",
+          description: "Certified B Corporations meet standards of social and environmental performance",
+          impact: "Would formalize their sustainable practices commitment"
+        },
+        {
+          name: "Fair Trade",
+          description: "Ensures ethical sourcing and fair wages",
+          impact: "Would verify their fair labor practices"
+        }
+      ],
+      greenwashing: []
     }
   },
   {

@@ -221,6 +221,114 @@ const AmazonAnalysisPage = () => {
               </div>
             </div>
 
+            {/* ESG Analysis */}
+            <div className="esg-section">
+              <h3>ESG Analysis</h3>
+              <div className="esg-grid">
+                <div className="esg-category">
+                  <div className="esg-header">
+                    <h4>Environmental</h4>
+                    <div className="esg-score">
+                      <span className="esg-score-value">{analysisData.esgAnalysis.environmental.score}</span>
+                      <span className="esg-grade" style={{color: analysisData.esgAnalysis.environmental.score >= 70 ? '#4CAF50' : analysisData.esgAnalysis.environmental.score >= 50 ? '#FF9800' : '#f44336'}}>
+                        {analysisData.esgAnalysis.environmental.grade}
+                      </span>
+                    </div>
+                  </div>
+                  <ul className="esg-factors">
+                    {analysisData.esgAnalysis.environmental.factors.map((factor, index) => (
+                      <li key={index}>{factor}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="esg-category">
+                  <div className="esg-header">
+                    <h4>Social</h4>
+                    <div className="esg-score">
+                      <span className="esg-score-value">{analysisData.esgAnalysis.social.score}</span>
+                      <span className="esg-grade" style={{color: analysisData.esgAnalysis.social.score >= 70 ? '#4CAF50' : analysisData.esgAnalysis.social.score >= 50 ? '#FF9800' : '#f44336'}}>
+                        {analysisData.esgAnalysis.social.grade}
+                      </span>
+                    </div>
+                  </div>
+                  <ul className="esg-factors">
+                    {analysisData.esgAnalysis.social.factors.map((factor, index) => (
+                      <li key={index}>{factor}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="esg-category">
+                  <div className="esg-header">
+                    <h4>Governance</h4>
+                    <div className="esg-score">
+                      <span className="esg-score-value">{analysisData.esgAnalysis.governance.score}</span>
+                      <span className="esg-grade" style={{color: analysisData.esgAnalysis.governance.score >= 70 ? '#4CAF50' : analysisData.esgAnalysis.governance.score >= 50 ? '#FF9800' : '#f44336'}}>
+                        {analysisData.esgAnalysis.governance.grade}
+                      </span>
+                    </div>
+                  </div>
+                  <ul className="esg-factors">
+                    {analysisData.esgAnalysis.governance.factors.map((factor, index) => (
+                      <li key={index}>{factor}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Sustainability Certifications */}
+            <div className="certifications-section">
+              <h3>Sustainability Certifications</h3>
+              
+              <div className="certifications-container">
+                <div className="verified-certifications">
+                  <h4>✓ Verified Certifications</h4>
+                  {analysisData.sustainabilityCertifications.verified.map((cert, index) => (
+                    <div key={index} className="certification-card verified">
+                      <div className="cert-header">
+                        <span className="cert-name">{cert.name}</span>
+                        <span className={`cert-credibility ${cert.credibility.toLowerCase()}`}>
+                          {cert.credibility} Credibility
+                        </span>
+                      </div>
+                      <p className="cert-description">{cert.description}</p>
+                      <p className="cert-scope">Scope: {cert.scope}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="missing-certifications">
+                  <h4>⚠ Missing Certifications</h4>
+                  {analysisData.sustainabilityCertifications.missing.map((cert, index) => (
+                    <div key={index} className="certification-card missing">
+                      <div className="cert-header">
+                        <span className="cert-name">{cert.name}</span>
+                      </div>
+                      <p className="cert-description">{cert.description}</p>
+                      <p className="cert-impact">Impact: {cert.impact}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="greenwashing-alerts">
+                  <h4>🚨 Greenwashing Concerns</h4>
+                  {analysisData.sustainabilityCertifications.greenwashing.map((concern, index) => (
+                    <div key={index} className="greenwashing-card">
+                      <div className="greenwash-header">
+                        <span className="greenwash-claim">"{concern.claim}"</span>
+                        <span className={`severity-badge ${concern.severity.toLowerCase()}`}>
+                          {concern.severity} Risk
+                        </span>
+                      </div>
+                      <p className="greenwash-reality">Reality: {concern.reality}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             {/* Environmental Impact */}
             <div className="environmental-section">
               <h3>Environmental Impact</h3>

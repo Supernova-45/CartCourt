@@ -64,7 +64,7 @@ const WishlistItem = ({ item, onAction }) => {
                 className="amazon-score"
                 style={{ backgroundColor: getSustainabilityColor(item.needsAssessment.sustainabilityScore) }}
               >
-                🌱 {item.needsAssessment.sustainabilityScore}/10 Sustainability
+                {item.needsAssessment.sustainabilityScore}/10 Sustainability
               </span>
               <span className="amazon-carbon">
                 {item.environmental.carbonFootprint} kg CO₂
@@ -82,7 +82,7 @@ const WishlistItem = ({ item, onAction }) => {
                 ⏰ Wait 30 days
               </button>
               <button className={getActionButtonClass('swap')} onClick={handleSwap}>
-                🔄 Find alternative
+                Find alternative
               </button>
               <button className={getActionButtonClass('donate')} onClick={handleDonate}>
                 💝 Donate instead
@@ -113,7 +113,7 @@ const WishlistItem = ({ item, onAction }) => {
         <div className="amazon-details-section">
           <div className="amazon-env-grid">
             <div className="amazon-env-card">
-              <h4>🌍 Environmental Impact</h4>
+              <h4>Environmental Impact</h4>
               <div className="amazon-env-items">
                 <div className="amazon-env-row">
                   <span>Carbon Footprint:</span>
@@ -135,7 +135,7 @@ const WishlistItem = ({ item, onAction }) => {
             </div>
             
             <div className="amazon-alt-card">
-              <h4>♻️ Sustainable Alternatives</h4>
+              <h4>Sustainable Alternatives</h4>
               <div className="amazon-alternatives">
                 {item.alternatives.map((alt, index) => (
                   <div 
@@ -171,17 +171,17 @@ const WishlistItem = ({ item, onAction }) => {
             <div className="amazon-action-feedback">
               {item.action === 'wait' && (
                 <div className="amazon-feedback wait">
-                  ✅ Great choice! Waiting helps reduce impulse purchases and lets you evaluate if you really need this item.
+                  Great choice! Waiting helps reduce impulse purchases and lets you evaluate if you really need this item.
                 </div>
               )}
               {item.action === 'swap' && (
                 <div className="amazon-feedback swap">
-                  ✅ Excellent! You've chosen the {item.alternatives[selectedAlternative].name} - a more sustainable option that saves {item.alternatives[selectedAlternative].carbonReduction.toFixed(1)} kg CO₂.
+                  Excellent! You've chosen the {item.alternatives[selectedAlternative].name} - a more sustainable option that saves {item.alternatives[selectedAlternative].carbonReduction.toFixed(1)} kg CO₂.
                 </div>
               )}
               {item.action === 'donate' && (
                 <div className="amazon-feedback donate">
-                  ✅ Wonderful! Redirecting $${item.price} to charitable causes creates positive impact and avoids environmental costs.
+                  Wonderful! Redirecting $${item.price} to charitable causes creates positive impact and avoids environmental costs.
                 </div>
               )}
             </div>

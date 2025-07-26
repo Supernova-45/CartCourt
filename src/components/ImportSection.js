@@ -7,7 +7,7 @@ const ImportSection = ({ onImport }) => {
         className="import-btn"
         onClick={onImport}
       >
-        📋 Import Wishlist
+        Import Wishlist
       </button>
       <p className="import-note">Click to analyze your Amazon wishlist for environmental impact</p>
     </section>

@@ -70,19 +70,19 @@ function App() {
       
       <nav className="navigation">
         <div className="container">
-          <div className="nav-buttons">
-            <button 
-              className={`nav-btn ${currentPage === 'wishlist' ? 'active' : ''}`}
-              onClick={() => setCurrentPage('wishlist')}
-            >
-              📋 Wishlist Analyzer
-            </button>
-            <button 
-              className={`nav-btn ${currentPage === 'search' ? 'active' : ''}`}
-              onClick={() => setCurrentPage('search')}
-            >
-              🔍 Product Search
-            </button>
+                  <div className="nav-buttons">
+          <button 
+            className={`nav-btn ${currentPage === 'wishlist' ? 'active' : ''}`}
+            onClick={() => setCurrentPage('wishlist')}
+          >
+            Wishlist Analyzer
+          </button>
+          <button 
+            className={`nav-btn ${currentPage === 'search' ? 'active' : ''}`}
+            onClick={() => setCurrentPage('search')}
+          >
+            Product Search
+          </button>
             <button 
               className={`nav-btn ${currentPage === 'profile' ? 'active' : ''}`}
               onClick={() => setCurrentPage('profile')}
@@ -125,7 +125,7 @@ function App() {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2025 Sustainable Wishlist Analyzer. Making purchasing decisions that matter. 🌍</p>
+          <p>&copy; 2025 Sustainable Wishlist Analyzer. Making purchasing decisions that matter.</p>
         </div>
       </footer>
     </div>

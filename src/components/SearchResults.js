@@ -44,7 +44,7 @@ const SearchResults = ({ query, onNewSearch }) => {
   return (
     <div className="search-results">
       <div className="results-header">
-        <h2>☕ Coffee Machine Recommendations</h2>
+        <h2>Coffee Machine Recommendations</h2>
         <p className="results-summary">
           Found {results.length} sustainable options based on analysis of {results.reduce((sum, item) => sum + item.totalReviews, 0).toLocaleString()} customer reviews
         </p>
@@ -52,9 +52,9 @@ const SearchResults = ({ query, onNewSearch }) => {
         <div className="sort-controls">
           <label>Sort by:</label>
           <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="sort-select">
-            <option value="sustainability">🌱 Sustainability Score</option>
-            <option value="price">💰 Price (Low to High)</option>
-            <option value="rating">⭐ Customer Rating</option>
+            <option value="sustainability">Sustainability Score</option>
+            <option value="price">Price (Low to High)</option>
+            <option value="rating">Customer Rating</option>
           </select>
         </div>
       </div>
@@ -92,7 +92,7 @@ const SearchResults = ({ query, onNewSearch }) => {
                 </div>
                 
                 <div className="review-analysis-summary">
-                  <h4>📊 Review Analysis Highlights</h4>
+                  <h4>Review Analysis Highlights</h4>
                   <div className="analysis-metrics">
                     <div className="metric">
                       <span className="metric-label">Sustainability Mentions:</span>
@@ -110,7 +110,7 @@ const SearchResults = ({ query, onNewSearch }) => {
                 </div>
                 
                 <div className="sustainability-highlights">
-                  <h4>🌱 Sustainability Highlights</h4>
+                  <h4>Sustainability Highlights</h4>
                   <ul>
                     {product.sustainabilityHighlights.slice(0, 2).map((highlight, idx) => (
                       <li key={idx}>{highlight}</li>
@@ -147,7 +147,7 @@ const SearchResults = ({ query, onNewSearch }) => {
               
               <div className="modal-body">
                 <div className="environmental-impact">
-                  <h3>🌍 Environmental Impact</h3>
+                  <h3>Environmental Impact</h3>
                   <div className="env-grid">
                     <div className="env-item">
                       <span>Carbon Footprint:</span>
@@ -169,11 +169,11 @@ const SearchResults = ({ query, onNewSearch }) => {
                 </div>
 
                 <div className="review-insights">
-                  <h3>💬 What Reviewers Are Saying</h3>
+                  <h3>What Reviewers Are Saying</h3>
                   
                   <div className="review-themes">
                     <div className="positive-themes">
-                      <h4>👍 Positive Themes</h4>
+                      <h4>Positive Themes</h4>
                       <ul>
                         {selectedProduct.reviewInsights.positiveThemes.map((theme, idx) => (
                           <li key={idx}>{theme}</li>
@@ -182,7 +182,7 @@ const SearchResults = ({ query, onNewSearch }) => {
                     </div>
                     
                     <div className="concerns">
-                      <h4>⚠️ Common Concerns</h4>
+                      <h4>Common Concerns</h4>
                       <ul>
                         {selectedProduct.reviewInsights.concerns.map((concern, idx) => (
                           <li key={idx}>{concern}</li>
@@ -192,7 +192,7 @@ const SearchResults = ({ query, onNewSearch }) => {
                   </div>
 
                   <div className="sustainability-reviews">
-                    <h4>🌱 Sustainability-Focused Reviews</h4>
+                    <h4>Sustainability-Focused Reviews</h4>
                     {selectedProduct.reviewInsights.sustainabilityReviews.map((review, idx) => (
                       <div key={idx} className="review-quote">
                         <div className="review-header">
@@ -208,7 +208,7 @@ const SearchResults = ({ query, onNewSearch }) => {
                 </div>
 
                 <div className="alternatives">
-                  <h3>♻️ Sustainable Alternatives</h3>
+                  <h3>Sustainable Alternatives</h3>
                   <div className="alternatives-list">
                     {selectedProduct.alternatives.map((alt, idx) => (
                       <div key={idx} className="alternative-card">
@@ -219,7 +219,7 @@ const SearchResults = ({ query, onNewSearch }) => {
                           <span className="price-fraction">.{((alt.price % 1) * 100).toFixed(0).padStart(2, '0')}</span>
                         </div>
                         <div className="carbon-savings">
-                          🌱 Saves {alt.carbonReduction} kg CO₂
+                          Saves {alt.carbonReduction} kg CO₂
                         </div>
                         <div className="alt-benefits">
                           {alt.benefits.map((benefit, bidx) => (
@@ -238,7 +238,7 @@ const SearchResults = ({ query, onNewSearch }) => {
 
       <div className="search-again">
         <button className="search-again-btn" onClick={onNewSearch}>
-          🔍 Search for Different Products
+          Search for Different Products
         </button>
       </div>
     </div>

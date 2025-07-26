@@ -20,7 +20,7 @@ const SearchPage = () => {
     <div className="search-page">
       <div className="search-hero">
         <div className="container">
-          <h1>🔍 Sustainable Product Search</h1>
+          <h1>Sustainable Product Search</h1>
           <p className="search-subtitle">Find eco-friendly alternatives based on real review analysis</p>
         </div>
       </div>
@@ -37,14 +37,14 @@ const SearchPage = () => {
                 className="search-input"
               />
               <button type="submit" className="search-btn">
-                🔍 Search
+                Search
               </button>
             </div>
           </form>
 
           {!hasSearched && (
             <div className="search-suggestions">
-              <h3>💡 Popular Sustainable Searches:</h3>
+              <h3>Popular Sustainable Searches:</h3>
               <div className="suggestion-chips">
                 <button 
                   className="suggestion-chip" 
@@ -68,7 +68,7 @@ const SearchPage = () => {
               
               <div className="search-info">
                 <div className="info-card">
-                  <h4>📊 How Our Analysis Works</h4>
+                  <h4>How Our Analysis Works</h4>
                   <ul>
                     <li><strong>Review Mining:</strong> We analyze thousands of product reviews</li>
                     <li><strong>Sustainability Focus:</strong> Extract mentions of durability, repairability, and eco-impact</li>

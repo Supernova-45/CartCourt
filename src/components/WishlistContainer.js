@@ -9,7 +9,7 @@ const WishlistContainer = ({ items, onItemAction }) => {
     <div className="amazon-wishlist-container">
       <div className="amazon-wishlist-header">
         <div className="amazon-wishlist-title">
-          <h1>🌱 My Sustainable Wishlist</h1>
+          <h1>My Sustainable Wishlist</h1>
           <div className="amazon-wishlist-meta">
             <span className="amazon-item-count">{totalItems} items</span>
             <span className="amazon-total-value">
@@ -48,7 +48,7 @@ const WishlistContainer = ({ items, onItemAction }) => {
       
       <div className="amazon-wishlist-footer">
         <p className="amazon-footer-note">
-          💡 This sustainable wishlist analyzer helps you make more conscious purchasing decisions by showing environmental impact and suggesting alternatives.
+          This sustainable wishlist analyzer helps you make more conscious purchasing decisions by showing environmental impact and suggesting alternatives.
         </p>
       </div>
     </div>

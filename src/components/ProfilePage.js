@@ -103,10 +103,10 @@ const ProfilePage = () => {
 
   const getActionIcon = (action) => {
     switch (action) {
-      case 'swapped': return '🔄';
+      case 'swapped': return '↻';
       case 'waited': return '⏰';
-      case 'donated': return '💝';
-      default: return '📋';
+      case 'donated': return '♥';
+      default: return '•';
     }
   };
 
@@ -127,7 +127,7 @@ const ProfilePage = () => {
       <div className="profile-header">
         <div className="profile-hero">
           <div className="profile-avatar">
-            <div className="avatar-circle">🌱</div>
+            <div className="avatar-circle">♻</div>
             <div className="level-badge">Level {userStats.level}</div>
           </div>
           <div className="profile-info">
@@ -141,21 +141,21 @@ const ProfilePage = () => {
 
         <div className="stats-overview">
           <div className="stat-card primary">
-            <div className="stat-icon">🌍</div>
+            <div className="stat-icon">♻</div>
             <div className="stat-content">
               <div className="stat-number">{userStats.carbonSaved}<span className="unit">kg</span></div>
               <div className="stat-label">CO₂ Saved</div>
             </div>
           </div>
           <div className="stat-card secondary">
-            <div className="stat-icon">⭐</div>
+            <div className="stat-icon">★</div>
             <div className="stat-content">
               <div className="stat-number">{userStats.greenPoints.toLocaleString()}</div>
               <div className="stat-label">Green Points</div>
             </div>
           </div>
           <div className="stat-card tertiary">
-            <div className="stat-icon">🎯</div>
+            <div className="stat-icon">⚡</div>
             <div className="stat-content">
               <div className="stat-number">{userStats.totalDecisions}</div>
               <div className="stat-label">Smart Decisions</div>
@@ -184,19 +184,19 @@ const ProfilePage = () => {
           className={`tab-btn ${activeTab === 'overview' ? 'active' : ''}`}
           onClick={() => setActiveTab('overview')}
         >
-          📊 Overview
+          Overview
         </button>
         <button 
           className={`tab-btn ${activeTab === 'history' ? 'active' : ''}`}
           onClick={() => setActiveTab('history')}
         >
-          📋 Decision History
+          Decision History
         </button>
         <button 
           className={`tab-btn ${activeTab === 'preferences' ? 'active' : ''}`}
           onClick={() => setActiveTab('preferences')}
         >
-          ⚙️ Preferences
+          Preferences
         </button>
       </div>
 
@@ -205,7 +205,7 @@ const ProfilePage = () => {
           <div className="overview-tab">
             <div className="charts-section">
               <div className="chart-card">
-                <h3>🌱 Carbon Saved Over Time</h3>
+                <h3>Carbon Saved Over Time</h3>
                 <div className="chart-container">
                   <div className="bar-chart">
                     {carbonOverTime.map((data, index) => (
@@ -226,7 +226,7 @@ const ProfilePage = () => {
               </div>
 
               <div className="chart-card">
-                <h3>🎯 Impact by Category</h3>
+                <h3>Impact by Category</h3>
                 <div className="category-chart">
                   {impactByCategory.map((category, index) => (
                     <div key={index} className="category-item">
@@ -251,7 +251,7 @@ const ProfilePage = () => {
             </div>
 
             <div className="achievements-section">
-              <h3>🏆 Recent Achievements</h3>
+                              <h3>Recent Achievements</h3>
               <div className="achievements-grid">
                 <div className="achievement-badge earned">
                   <div className="badge-icon">🌟</div>
@@ -268,7 +268,7 @@ const ProfilePage = () => {
                   </div>
                 </div>
                 <div className="achievement-badge locked">
-                  <div className="badge-icon">🎯</div>
+                  <div className="badge-icon">⚡</div>
                   <div className="badge-info">
                     <div className="badge-title">Master Swapper</div>
                     <div className="badge-desc">50 swaps made</div>
@@ -289,7 +289,7 @@ const ProfilePage = () => {
         {activeTab === 'history' && (
           <div className="history-tab">
             <div className="history-header">
-              <h3>📋 Your Decision History</h3>
+                              <h3>Your Decision History</h3>
               <div className="history-stats">
                 <div className="history-stat">
                   <span className="stat-value">{decisionHistory.filter(d => d.action === 'swapped').length}</span>
@@ -342,7 +342,7 @@ const ProfilePage = () => {
                     </div>
                     
                     <div className="decision-impact">
-                      <span className="carbon-saved">🌱 {decision.carbonSaved}kg CO₂ saved</span>
+                      <span className="carbon-saved">{decision.carbonSaved}kg CO₂ saved</span>
                     </div>
 
                     {decision.alternative && (
@@ -364,7 +364,7 @@ const ProfilePage = () => {
         {activeTab === 'preferences' && (
           <div className="preferences-tab">
             <div className="preferences-section">
-              <h3>🔔 Reminder Settings</h3>
+                              <h3>Reminder Settings</h3>
               <div className="preference-group">
                 <label className="preference-label">
                   Reminder Frequency
@@ -396,7 +396,7 @@ const ProfilePage = () => {
             </div>
 
             <div className="preferences-section">
-              <h3>🎯 Category Interests</h3>
+                              <h3>Category Interests</h3>
               <div className="category-preferences">
                 {['Electronics', 'Fashion', 'Home & Garden', 'Kitchen', 'Sports & Outdoors', 'Books & Media'].map(category => (
                   <label key={category} className="category-checkbox">
@@ -420,7 +420,7 @@ const ProfilePage = () => {
             </div>
 
             <div className="preferences-section">
-              <h3>📱 Notification Preferences</h3>
+                              <h3>Notification Preferences</h3>
               <div className="notification-preferences">
                 {Object.entries(preferences.notifications).map(([key, value]) => (
                   <label key={key} className="notification-toggle">

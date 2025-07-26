@@ -9,9 +9,10 @@ import ActionSummary from './components/ActionSummary';
 import SearchPage from './components/SearchPage';
 import ProfilePage from './components/ProfilePage';
 import AmazonAnalysisPage from './components/AmazonAnalysisPage';
+import CartPage from './components/CartPage';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('wishlist'); // 'wishlist', 'search', 'profile', or 'amazon-analysis'
+  const [currentPage, setCurrentPage] = useState('cart'); // 'wishlist', 'search', 'profile', 'amazon-analysis', or 'cart'
   const [isImported, setIsImported] = useState(false);
   const [items, setItems] = useState([]);
   const [actionCounts, setActionCounts] = useState({
@@ -91,10 +92,16 @@ function App() {
             Wishlist Analyzer
           </button>
           <button 
+            className={`nav-btn ${currentPage === 'cart' ? 'active' : ''}`}
+            onClick={() => setCurrentPage('cart')}
+          >
+            Shopping Cart
+          </button>
+          <button 
             className={`nav-btn ${currentPage === 'profile' ? 'active' : ''}`}
             onClick={() => setCurrentPage('profile')}
           >
-            👤 My Profile
+            My Profile
           </button>
           </div>
         </div>
@@ -127,6 +134,8 @@ function App() {
           <SearchPage />
         ) : currentPage === 'amazon-analysis' ? (
           <AmazonAnalysisPage />
+        ) : currentPage === 'cart' ? (
+          <CartPage />
         ) : (
           <ProfilePage />
         )}

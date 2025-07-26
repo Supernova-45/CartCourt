@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/greensleeves/static/css/main.113aad65.css",
+    "main.js": "/greensleeves/static/js/main.ab64a326.js",
+    "index.html": "/greensleeves/index.html",
+    "main.113aad65.css.map": "/greensleeves/static/css/main.113aad65.css.map",
+    "main.ab64a326.js.map": "/greensleeves/static/js/main.ab64a326.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.113aad65.css",
+    "static/js/main.ab64a326.js"
+  ]
+}

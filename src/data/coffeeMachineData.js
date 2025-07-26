@@ -2,11 +2,11 @@ export const coffeeMachineData = [
   {
     id: 1,
     name: "Breville Barista Express Espresso Machine",
-    brand: "Breville",
+    brand: "Breville", 
     price: 699.95,
     rating: 4.4,
     totalReviews: 8547,
-    image: "https://via.placeholder.com/300x200/8B4513/FFFFFF?text=Breville+Barista",
+    image: "/coffee_machine_files/71io+Gh4ApL._AC_UL320_.jpg",
     category: "Semi-Automatic Espresso Machine",
     reviewAnalysis: {
       sentiment: "Positive",
@@ -73,12 +73,12 @@ export const coffeeMachineData = [
   },
   {
     id: 2,
-    name: "Technivorm Moccamaster KBGV Select",
+    name: "Technivorm Moccamaster KBGV Select", 
     brand: "Technivorm",
     price: 369.00,
     rating: 4.6,
     totalReviews: 3421,
-    image: "https://via.placeholder.com/300x200/2F4F4F/FFFFFF?text=Moccamaster",
+    image: "/coffee_machine_files/61a7BOOkDjL._AC_UL320_.jpg",
     category: "Drip Coffee Maker",
     reviewAnalysis: {
       sentiment: "Very Positive",
@@ -146,11 +146,11 @@ export const coffeeMachineData = [
   {
     id: 3,
     name: "Nespresso VertuoPlus Coffee and Espresso Maker",
-    brand: "Nespresso",
+    brand: "Nespresso", 
     price: 199.95,
     rating: 4.2,
     totalReviews: 12847,
-    image: "https://via.placeholder.com/300x200/8B0000/FFFFFF?text=Nespresso+Vertuo",
+    image: "/coffee_machine_files/51HrtoZ9YVL._AC_UL320_.jpg",
     category: "Pod Coffee Machine",
     reviewAnalysis: {
       sentiment: "Mixed",
@@ -222,7 +222,7 @@ export const coffeeMachineData = [
     price: 129.99,
     rating: 4.1,
     totalReviews: 5689,
-    image: "https://via.placeholder.com/300x200/4682B4/FFFFFF?text=Hamilton+Beach",
+    image: "/coffee_machine_files/71gYAwOfxPL._AC_UL320_.jpg",
     category: "Multi-Serve Coffee Maker",
     reviewAnalysis: {
       sentiment: "Positive",
@@ -294,7 +294,7 @@ export const coffeeMachineData = [
     price: 79.95,
     rating: 4.3,
     totalReviews: 9234,
-    image: "https://via.placeholder.com/300x200/800080/FFFFFF?text=Cuisinart",
+    image: "/coffee_machine_files/71BvCt6eAFL._AC_UL320_.jpg",
     category: "Programmable Drip Coffee Maker",
     reviewAnalysis: {
       sentiment: "Positive",
@@ -356,6 +356,311 @@ export const coffeeMachineData = [
         price: 150.00,
         carbonReduction: 5.3,
         benefits: ["Better materials", "Longer warranty", "More precise temperature"]
+      }
+    ]
+  },
+  {
+    id: 6,
+    name: "Keurig K-Elite Single Serve Coffee Maker",
+    brand: "Keurig",
+    price: 169.99,
+    rating: 4.3,
+    totalReviews: 15247,
+    image: "/coffee_machine_files/71McTfnZGvL._AC_UL320_.jpg",
+    category: "Single Serve Coffee Maker",
+    reviewAnalysis: {
+      sentiment: "Positive",
+      sustainabilityMentions: 156,
+      durabilityScore: 6.7,
+      repairabilityScore: 4.2,
+      energyEfficiencyMentions: 98,
+      materialQualityScore: 6.9
+    },
+    environmental: {
+      carbonFootprint: 28.4,
+      microplastics: "High",
+      energyUsage: "Medium (1500W)",
+      waterUsage: 22,
+      recyclability: "Low (plastic)",
+      packaging: "Recyclable cardboard"
+    },
+    sustainabilityHighlights: [
+      "Compatible with reusable K-Cup filter",
+      "Strong brew option uses less pods per serving", 
+      "Auto-off feature saves energy",
+      "Multiple cup sizes reduce waste"
+    ],
+    reviewInsights: {
+      positiveThemes: [
+        "Fast single-serve convenience",
+        "Multiple brew strength options",
+        "Large water reservoir",
+        "Quiet brewing operation"
+      ],
+      concerns: [
+        "K-Cup waste environmental impact",
+        "Descaling required regularly",
+        "Limited to Keurig ecosystem",
+        "Plastic taste initially"
+      ],
+      sustainabilityReviews: [
+        {
+          user: "EcoOfficeWorker",
+          rating: 3,
+          comment: "Convenient for the office but I switched to using the reusable filter. Much better environmentally and saves money on K-Cups."
+        }
+      ]
+    },
+    alternatives: [
+      {
+        name: "Pour-Over Single Cup Setup",
+        price: 35.00,
+        carbonReduction: 26.8,
+        benefits: ["No pods needed", "Better coffee quality", "Minimal waste"]
+      }
+    ]
+  },
+  {
+    id: 7,
+    name: "De'Longhi Stilosa Manual Espresso Machine",
+    brand: "De'Longhi",
+    price: 99.95,
+    rating: 4.1,
+    totalReviews: 7856,
+    image: "/coffee_machine_files/61B869x6ElL._AC_UL320_.jpg",
+    category: "Manual Espresso Machine",
+    reviewAnalysis: {
+      sentiment: "Positive",
+      sustainabilityMentions: 78,
+      durabilityScore: 7.4,
+      repairabilityScore: 8.1,
+      energyEfficiencyMentions: 45,
+      materialQualityScore: 7.8
+    },
+    environmental: {
+      carbonFootprint: 19.2,
+      microplastics: "Low",
+      energyUsage: "Low (1100W)",
+      waterUsage: 8,
+      recyclability: "High (mostly metal)",
+      packaging: "Minimal packaging"
+    },
+    sustainabilityHighlights: [
+      "Manual operation means no electronics to break",
+      "Compact footprint saves resources",
+      "Compatible with any ground coffee",
+      "Simple design aids longevity"
+    ],
+    reviewInsights: {
+      positiveThemes: [
+        "Great value for espresso quality",
+        "Compact size perfect for small spaces",
+        "Manual control over brewing process",
+        "Easy to clean and maintain"
+      ],
+      concerns: [
+        "Learning curve for espresso novices",
+        "No automatic features",
+        "Small water tank capacity",
+        "Plastic drip tray"
+      ],
+      sustainabilityReviews: [
+        {
+          user: "MinimalBrewer",
+          rating: 5,
+          comment: "Love the simplicity - no complex electronics to fail. Been using fresh beans instead of pods and the quality is fantastic for the price."
+        }
+      ]
+    },
+    alternatives: [
+      {
+        name: "Moka Pot (Stovetop)",
+        price: 35.00,
+        carbonReduction: 18.1,
+        benefits: ["No electricity", "Decades of use", "Pure aluminum construction"]
+      }
+    ]
+  },
+  {
+    id: 8,
+    name: "Ninja Specialty Coffee Maker",
+    brand: "Ninja",
+    price: 199.99,
+    rating: 4.4,
+    totalReviews: 11234,
+    image: "/coffee_machine_files/51l2h37RiFL._AC_UL320_.jpg",
+    category: "Specialty Coffee Maker",
+    reviewAnalysis: {
+      sentiment: "Very Positive",
+      sustainabilityMentions: 92,
+      durabilityScore: 7.2,
+      repairabilityScore: 6.5,
+      energyEfficiencyMentions: 67,
+      materialQualityScore: 7.6
+    },
+    environmental: {
+      carbonFootprint: 24.8,
+      microplastics: "Medium",
+      energyUsage: "Medium (1200W)",
+      waterUsage: 16,
+      recyclability: "Medium (mixed materials)",
+      packaging: "Recyclable cardboard"
+    },
+    sustainabilityHighlights: [
+      "Versatile - replaces multiple appliances",
+      "Works with any ground coffee (no pods)",
+      "Cold brew feature reduces energy use",
+      "Programmable to optimize energy consumption"
+    ],
+    reviewInsights: {
+      positiveThemes: [
+        "Incredible versatility - hot, iced, cold brew",
+        "Rich flavor extraction technology",
+        "Large capacity for families",
+        "User-friendly controls"
+      ],
+      concerns: [
+        "Large footprint takes counter space",
+        "Complex features may overwhelm beginners",
+        "More expensive than basic drip makers",
+        "Cleaning can be time-consuming"
+      ],
+      sustainabilityReviews: [
+        {
+          user: "VersatileCoffee",
+          rating: 5,
+          comment: "Replaced my old drip maker, French press, AND cold brew setup with this one machine. Less clutter and works with any coffee beans I want."
+        }
+      ]
+    },
+    alternatives: [
+      {
+        name: "Manual Cold Brew + French Press Combo",
+        price: 65.00,
+        carbonReduction: 22.3,
+        benefits: ["No electricity", "Simple maintenance", "Outstanding coffee"]
+      }
+    ]
+  },
+  {
+    id: 9,
+    name: "BLACK+DECKER 12-Cup Thermal Coffee Maker",
+    brand: "BLACK+DECKER",
+    price: 89.99,
+    rating: 4.2,
+    totalReviews: 8945,
+    image: "/coffee_machine_files/61UTFJux1pL._AC_UL320_.jpg",
+    category: "Thermal Coffee Maker",
+    reviewAnalysis: {
+      sentiment: "Positive",
+      sustainabilityMentions: 73,
+      durabilityScore: 6.8,
+      repairabilityScore: 7.1,
+      energyEfficiencyMentions: 84,
+      materialQualityScore: 6.4
+    },
+    environmental: {
+      carbonFootprint: 21.1,
+      microplastics: "Medium",
+      energyUsage: "Medium (900W)",
+      waterUsage: 15,
+      recyclability: "Medium (stainless carafe)",
+      packaging: "Standard packaging"
+    },
+    sustainabilityHighlights: [
+      "Thermal carafe eliminates hot plate energy use",
+      "Large capacity reduces brewing frequency",
+      "Affordable sustainability option",
+      "Auto-shutoff prevents energy waste"
+    ],
+    reviewInsights: {
+      positiveThemes: [
+        "Great value for thermal brewing",
+        "Keeps coffee hot for hours without burning",
+        "Easy to use and program",
+        "Large capacity perfect for offices"
+      ],
+      concerns: [
+        "Build quality not premium",
+        "Carafe can be difficult to pour",
+        "Some plastic components",
+        "Water reservoir could be larger"
+      ],
+      sustainabilityReviews: [
+        {
+          user: "BudgetOffice",
+          rating: 4,
+          comment: "Perfect for our office - makes a lot of coffee and keeps it hot all day without wasting electricity on a hot plate. Good value for a thermal machine."
+        }
+      ]
+    },
+    alternatives: [
+      {
+        name: "Thermal Carafe + Pour Over",
+        price: 55.00,
+        carbonReduction: 19.6,
+        benefits: ["Manual control", "No electricity for heating", "Better coffee quality"]
+      }
+    ]
+  },
+  {
+    id: 10,
+    name: "Mr. Coffee Iced Coffee Maker",
+    brand: "Mr. Coffee", 
+    price: 39.99,
+    rating: 4.0,
+    totalReviews: 6789,
+    image: "/coffee_machine_files/71LB1AbsorL._AC_UL320_.jpg",
+    category: "Iced Coffee Maker",
+    reviewAnalysis: {
+      sentiment: "Positive",
+      sustainabilityMentions: 45,
+      durabilityScore: 6.1,
+      repairabilityScore: 6.7,
+      energyEfficiencyMentions: 32,
+      materialQualityScore: 5.9
+    },
+    environmental: {
+      carbonFootprint: 14.3,
+      microplastics: "Medium",
+      energyUsage: "Low (600W)",
+      waterUsage: 10,
+      recyclability: "Medium (mostly plastic)",
+      packaging: "Minimal packaging"
+    },
+    sustainabilityHighlights: [
+      "Lower energy use than traditional makers",
+      "Reduces need for coffee shop visits",
+      "Simple design means fewer parts to break",
+      "Affordable entry to home brewing"
+    ],
+    reviewInsights: {
+      positiveThemes: [
+        "Perfect for iced coffee lovers",
+        "Quick and convenient",
+        "Compact design",
+        "Very affordable"
+      ],
+      concerns: [
+        "Limited to iced coffee only",
+        "Plastic construction throughout",
+        "Small capacity",
+        "Not built for heavy daily use"
+      ],
+      sustainabilityReviews: [
+        {
+          user: "IcedCoffeeFan",
+          rating: 4,
+          comment: "Great little machine for summer! Saves me money and reduces waste from coffee shop runs. Simple design means it should last a while."
+        }
+      ]
+    },
+    alternatives: [
+      {
+        name: "Cold Brew Concentrate System",
+        price: 25.00,
+        carbonReduction: 13.8,
+        benefits: ["No electricity", "Makes concentrate", "Glass construction available"]
       }
     ]
   }

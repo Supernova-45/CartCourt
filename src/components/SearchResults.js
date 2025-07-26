@@ -85,7 +85,11 @@ const SearchResults = ({ query, onNewSearch }) => {
                   <span className="rating-text">{product.rating}/5 ({product.totalReviews.toLocaleString()} reviews)</span>
                 </div>
                 
-                <div className="product-price">${product.price}</div>
+                <div className="product-price">
+                  <span className="price-symbol">$</span>
+                  <span className="price-whole">{Math.floor(product.price)}</span>
+                  <span className="price-fraction">{((product.price % 1) * 100).toFixed(0).padStart(2, '0')}</span>
+                </div>
                 
                 <div className="review-analysis-summary">
                   <h4>📊 Review Analysis Highlights</h4>
@@ -134,7 +138,11 @@ const SearchResults = ({ query, onNewSearch }) => {
             <div className="modal-content">
               <div className="modal-header">
                 <h2>{selectedProduct.name}</h2>
-                <div className="modal-price">${selectedProduct.price}</div>
+                <div className="modal-price">
+                <span className="price-symbol">$</span>
+                <span className="price-whole">{Math.floor(selectedProduct.price)}</span>
+                <span className="price-fraction">{((selectedProduct.price % 1) * 100).toFixed(0).padStart(2, '0')}</span>
+              </div>
               </div>
               
               <div className="modal-body">
@@ -205,7 +213,11 @@ const SearchResults = ({ query, onNewSearch }) => {
                     {selectedProduct.alternatives.map((alt, idx) => (
                       <div key={idx} className="alternative-card">
                         <h4>{alt.name}</h4>
-                        <div className="alt-price">${alt.price}</div>
+                        <div className="alt-price">
+                          <span className="price-symbol">$</span>
+                          <span className="price-whole">{Math.floor(alt.price)}</span>
+                          <span className="price-fraction">{((alt.price % 1) * 100).toFixed(0).padStart(2, '0')}</span>
+                        </div>
                         <div className="carbon-savings">
                           🌱 Saves {alt.carbonReduction} kg CO₂
                         </div>

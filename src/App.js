@@ -82,7 +82,7 @@ function App() {
             className={`nav-btn ${currentPage === 'amazon-analysis' ? 'active' : ''}`}
             onClick={() => setCurrentPage('amazon-analysis')}
           >
-            🌱 Amazon Analysis
+            Amazon Analysis
           </button>
           <button 
             className={`nav-btn ${currentPage === 'wishlist' ? 'active' : ''}`}

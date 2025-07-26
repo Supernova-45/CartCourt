@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { keurigAnalysisData } from '../data/keurigAnalysisData';
+import ImageLoader from './ImageLoader';
 
 const AmazonAnalysisPage = () => {
   const [amazonUrl, setAmazonUrl] = useState('');
@@ -125,7 +126,7 @@ const AmazonAnalysisPage = () => {
             {/* Product Header */}
             <div className="product-header">
               <div className="product-image">
-                <img src={analysisData.productInfo.image} alt={analysisData.productInfo.title} />
+                <ImageLoader src={analysisData.productInfo.image} alt={analysisData.productInfo.title} />
               </div>
               <div className="product-details">
                 <h2>{analysisData.productInfo.title}</h2>

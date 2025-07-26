@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ImageLoader from './ImageLoader';
 
 const WishlistItem = ({ item, onAction }) => {
   const [selectedAlternative, setSelectedAlternative] = useState(0);
@@ -38,13 +39,9 @@ const WishlistItem = ({ item, onAction }) => {
     <div className="amazon-wishlist-item">
       <div className="amazon-item-main">
         <div className="amazon-item-image">
-          <img 
+          <ImageLoader 
             src={item.image} 
             alt={item.name}
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = '/wishlist_files/default.png';
-            }}
           />
         </div>
         

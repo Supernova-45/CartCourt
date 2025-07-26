@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { coffeeMachineData } from '../data/coffeeMachineData';
+import ImageLoader from './ImageLoader';
 
 const SearchResults = ({ query, onNewSearch }) => {
   const [sortBy, setSortBy] = useState('sustainability'); // sustainability, price, rating
@@ -66,7 +67,7 @@ const SearchResults = ({ query, onNewSearch }) => {
           return (
             <div key={product.id} className="product-card">
               <div className="product-image">
-                <img src={product.image} alt={product.name} />
+                <ImageLoader src={product.image} alt={product.name} />
                 <div 
                   className="sustainability-badge" 
                   style={{ backgroundColor: sustainabilityGrade.color }}
